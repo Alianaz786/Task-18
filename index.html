@@ -1,0 +1,89 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificate Showcase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Light/Dark Mode Toggle -->
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="themeToggle" />
+      <span class="slider round"></span>
+    </label>
+    <span>Dark Mode</span>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>Internship Certificate Showcase</h1>
+    <p class="subtitle">A collection of successfully completed internships</p>
+  </header>
+
+  <!-- Filter -->
+  <div class="filter-container">
+    <select id="roleFilter" onchange="filterCards()">
+      <option value="all">All Roles</option>
+      <option value="frontend">Frontend Developer</option>
+      <option value="backend">Backend Developer</option>
+      <option value="uiux">UI/UX Intern</option>
+      <option value="fullstack">Full Stack</option>
+    </select>
+  </div>
+
+  <!-- Certificate Gallery -->
+  <section class="gallery" id="gallery">
+
+    <!-- Example Card -->
+    <div class="card animate role-frontend">
+      <img src="cert1.png" alt="Certificate 1" onclick="openModal(this.src)" />
+      <h3>Ali Raza</h3>
+      <p class="role">Frontend Developer</p>
+      <p class="date">Issued: Jan 2025</p>
+      <button onclick="openModal('cert1.jpg')">View Certificate</button>
+    </div>
+
+    <div class="card animate role-uiux">
+      <img src="cert2.jpeg" alt="Certificate 2" onclick="openModal(this.src)" />
+      <h3>Ayesha Khan</h3>
+      <p class="role">UI/UX Intern</p>
+      <p class="date">Issued: Feb 2025</p>
+      <button onclick="openModal('cert2.jpg')">View Certificate</button>
+    </div>
+
+    <div class="card animate role-backend">
+      <img src="cert3.jpeg" alt="Certificate 3" onclick="openModal(this.src)" />
+      <h3>Hamza Tariq</h3>
+      <p class="role">Backend Developer</p>
+      <p class="date">Issued: Mar 2025</p>
+      <button onclick="openModal('cert3.jpg')">View Certificate</button>
+    </div>
+
+    <div class="card animate role-fullstack">
+      <img src="cert4.jpeg" alt="Certificate 4" onclick="openModal(this.src)" />
+      <h3>Sana Iqbal</h3>
+      <p class="role">Full Stack Intern</p>
+      <p class="date">Issued: Apr 2025</p>
+      <button onclick="openModal('cert4.jpg')">View Certificate</button>
+    </div>
+
+    <!-- Add more cards as needed -->
+
+  </section>
+<!-- Modal -->
+<div class="modal" id="certificateModal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage" src="">
+</div>
+
+
+  <!-- Scroll to Top -->
+  <button onclick="scrollToTop()" class="scroll-top-btn">⬆</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
